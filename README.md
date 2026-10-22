@@ -155,11 +155,11 @@ Pour tester ces hypothèses, je vais faire usage d’un intervalle de confiance 
 ```bash
 Analyse-BAAC/
 ├── base_donnee/
-│   ├── table/                    # Tables CSV de la base de données (BAAC 2019-2024)
+│   ├── tables/                    # Tables CSV de la base de données (BAAC 2019-2024)
 │   │   └── *.csv
 │   ├── baac.sql                  # Création de la base de données et des tables
 │   ├── cleaning.py               # Nettoyage des données et chargement dans MySQL
-│   ├── cleaning_function.py      # Fonctions de nettoyage utilisées par cleaning.py
+│   ├── cleaning_functions.py      # Fonctions de nettoyage utilisées par cleaning.py
 │   └── nettoyage.sql             # Nettoyage complémentaire de la base SQL
 ├── output_sql/                   # Fichiers CSV exportés depuis MySQL
 │   └── *.csv
