@@ -43,7 +43,7 @@ tables_usagers = [
 
 database = "baac" #Base de donnée dans laquelle intégrer les données.
 
-conn = sqlalchemy.create_engine(f"mysql+pymysql://root:root@localhost:3306/{database}") #Connexion avec la base MySql pour stocker les datas.
+conn = sqlalchemy.create_engine(f"mysql+pymysql://UTILISATEUR:MOT_DE_PASSE@localhost:port/{database}") #Connexion avec la base MySql pour stocker les datas.
 
 for c in tables_caracteristiques : 
 #Nettoyage global de la table "caracteristique" : 
