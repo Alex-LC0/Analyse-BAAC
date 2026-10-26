@@ -177,10 +177,10 @@ JOIN facteur_lieux ON gravite_acc.numero_accident = facteur_lieux.numero_acciden
 JOIN caracteristiques ON gravite_acc.numero_accident = caracteristiques.numero_accident
 JOIN luminoste_ref ON luminoste_ref.luminosite = caracteristiques.luminosite
 JOIN cond_atmosphere_ref ON cond_atmosphere_ref.cond_atmosphere = caracteristiques.cond_atmosphere
-WHERE rang = 1;
---INTO OUTFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/facteur_externes.csv"
---FIELDS TERMINATED BY ";" OPTIONALLY ENCLOSED BY '"'
---LINES TERMINATED BY '\r\n'
+WHERE rang = 1
+INTO OUTFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/facteur_externes.csv"
+FIELDS TERMINATED BY ";" OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
 
 /*
 
@@ -305,10 +305,10 @@ SELECT
     n_usagers_leger,
     n_usagers_grave,
     ROUND((n_usagers_grave / n_usagers) * 100.0, 2) AS per_usagers_grave
-FROM count_usagers;
---INTO OUTFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/genre_count.csv"
---FIELDS TERMINATED BY ";" OPTIONALLY ENCLOSED BY '"'
---LINES TERMINATED BY '\r\n';
+FROM count_usagers
+INTO OUTFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/genre_count.csv"
+FIELDS TERMINATED BY ";" OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n';
 
 SELECT
     YEAR(date_hrmn) AS annee_accident,
@@ -320,7 +320,7 @@ SELECT
 FROM usagers
 JOIN caracteristiques ON caracteristiques.numero_accident = usagers.numero_accident
 JOIN sexe_ref ON sexe_ref.sexe = usagers.sexe
-HAVING usagers.sexe != -1 AND gravite !=-1;
---INTO OUTFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/genre_total_accident_ng.csv"
---FIELDS TERMINATED BY ";" OPTIONALLY ENCLOSED BY '"'
---LINES TERMINATED BY '\r\n';
+HAVING usagers.sexe != -1 AND gravite !=-1
+INTO OUTFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/genre_total_accident_ng.csv"
+FIELDS TERMINATED BY ";" OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n';
