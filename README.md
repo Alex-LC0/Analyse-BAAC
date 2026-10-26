@@ -161,10 +161,6 @@ Analyse-BAAC/
 │   ├── cleaning.py               # Nettoyage des données et chargement dans MySQL
 │   ├── cleaning_functions.py      # Fonctions de nettoyage utilisées par cleaning.py
 │   └── nettoyage.sql             # Nettoyage complémentaire de la base SQL
-├── output_sql/                   # Fichiers CSV exportés depuis MySQL
-│   └── *.csv
-├── csv/                          # Fichiers CSV nettoyés et exportés depuis Python
-│   └── *.csv
 ├── analyse.sql                   # Requêtes d'extraction des données
 ├── notebook_analyse.ipynb        # Notebook d'analyse statistique
 ├── fx_analyse.py                 # Fonctions utilisées par le notebook
